@@ -1,4 +1,3 @@
-import re
 from datetime import datetime
 
 import mysql.connector
@@ -58,9 +57,6 @@ class Database:
         if post_object['PublishDateTime'] == '':
             post_object['PublishDateTime'] = datetime.strptime('Jun 1 1990  1:33PM', '%b %d %Y %I:%M%p')
 
-        post_object['Text'] = ' '.join(list(filter(None, re.split('\W|\d', post_object['Text']))))
-
-
         add_WallPost = ("INSERT INTO WallPost"
                         
                         "(OuterId, PublishDateTime, Text, WallOwnerOuterId, \
@@ -76,9 +72,6 @@ class Database:
         print("comment", comit_obgect)
         if comit_obgect['PublishDateTime'] == '':
             comit_obgect['PublishDateTime'] = datetime.strptime('Jun 1 1990  1:33PM', '%b %d %Y %I:%M%p')
-
-        comit_obgect['Text'] = ' '.join(list(filter(None, re.split('\W|\d', comit_obgect['Text']))))
-
 
         add_WallPost = ("INSERT INTO Comment"
                         

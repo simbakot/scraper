@@ -1,0 +1,16 @@
+VK:
+  login: '+7XXXXXXXXXX'
+  password: 'pass'
+  friends_threshold: 0
+  year_threshold: 2019
+
+database:
+  host: 'services.cashee.ru'
+  port: 30100
+  database: 'Altay'
+  user: 'altay'
+  password: 'altay123'
+
+controller:
+  friends_threshold: 150
+  year_threshold: 2019

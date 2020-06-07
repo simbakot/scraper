@@ -37,8 +37,6 @@ while True:
             users = controller.get_target_user(resource=vk, group_id=url)
             for user in users:
 
-                user['BirthDate'] = handle_date(user['BirthDate'])
-
                 controller.save_data_to_bd(bd=database, table='SocialNetworkUser', target_object=user)
 
                 posts = controller.get_target_post(resource=vk, user_id=user['OuterId'])

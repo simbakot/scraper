@@ -36,8 +36,8 @@ class Database:
 
     def add_users(self, users_object):
         print("user", users_object)
-        if users_object['BirthDate'] == "":
-            users_object['BirthDate'] = datetime.strptime('Jun 1 1990  1:33PM', '%b %d %Y %I:%M%p')
+
+        users_object['BirthDate'] = datetime.strptime('Jun 1 1990  1:33PM', '%b %d %Y %I:%M%p')
 
 
         add_SocialNetworkUser = ("INSERT INTO SocialNetworkUser"
